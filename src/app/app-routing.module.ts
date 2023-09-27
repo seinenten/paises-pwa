@@ -5,13 +5,16 @@ import { PaisComponent } from './pages/pais/pais.component';
 
 const routes: Routes = [
   {
-    path: '', component: PaisesComponent
+    path: '', redirectTo: 'inicio', pathMatch: 'full'
+  },
+  {
+    path: 'inicio', component: PaisesComponent
   },
   {
     path: 'pais/:id', component: PaisComponent
   },
   {
-    path: '**', redirectTo: ''
+    path: '**', redirectTo: 'inicio'
   }
 ];
 
